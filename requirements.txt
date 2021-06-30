@@ -1,0 +1,6 @@
+pixellib==0.6.6
+tensorflow==2.5.0
+Flask==1.1.1
+Flask-SQLAlchemy==2.4.0
+gunicorn==19.9.0
+requests==2.22.0
