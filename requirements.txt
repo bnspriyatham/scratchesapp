@@ -1,5 +1,4 @@
-python-3.8.11
-pixellib==0.6.6
+pixellib
 Flask==1.1.1
 Flask-SQLAlchemy==2.4.0
 requests==2.22.0
