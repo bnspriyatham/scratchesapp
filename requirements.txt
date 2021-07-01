@@ -7,3 +7,4 @@ skia-python
 opencv-contrib-python-headless
 tensorflow-cpu
 h5py
+wget
