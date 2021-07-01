@@ -5,6 +5,7 @@ import base64
 import cv2
 from io import BytesIO
 from PIL import Image
+import h5py
 
 
 INPUT_IMAGE = ".input.jpg"
