@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from werkzeug.utils import secure_filename
+import pixellib
 from pixellib.instance import custom_segmentation
 import base64
 import cv2
