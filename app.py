@@ -25,7 +25,7 @@ def post():
     segment_image = custom_segmentation()
     segment_image.inferConfig(num_classes= 1, class_names= "scratch")
     segment_image.load_model("mask_rcnn_model.020-1.088950.h5")
-    instance_segment_image.segmentImage(INPUT_IMAGE, output_image_name=OUTPUT_IMAGE, show_bboxes=True)
+    segment_image.segmentImage(INPUT_IMAGE, output_image_name=OUTPUT_IMAGE, show_bboxes=True)
     print("output received")
     with open(OUTPUT_IMAGE, "rb") as img_file:
         my_string = base64.b64encode(img_file.read())
