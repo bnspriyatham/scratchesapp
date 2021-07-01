@@ -5,3 +5,7 @@ requests==2.22.0
 opencv-python
 gunicorn
 skia-python
+libsm6
+libxrender1
+libfontconfig1
+libice6
