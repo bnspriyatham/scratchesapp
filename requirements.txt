@@ -5,3 +5,4 @@ requests==2.22.0
 gunicorn
 skia-python
 opencv-contrib-python-headless
+tensorflow-cpu
