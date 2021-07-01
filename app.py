@@ -9,6 +9,9 @@ from PIL import Image
 
 INPUT_IMAGE = ".input.jpg"
 OUTPUT_IMAGE = ".output.jpg"
+segment_image = custom_segmentation()
+segment_image.inferConfig(num_classes= 1, class_names= "scratch")
+segment_image.load_model("mask_rcnn_model.020-1.088950.h5")
 
 #app
 app = Flask(__name__)
@@ -22,9 +25,6 @@ def post():
     image_data = BytesIO(image_string)
     img = Image.open(image_data)
     img.save(INPUT_IMAGE)
-    segment_image = custom_segmentation()
-    segment_image.inferConfig(num_classes= 1, class_names= "scratch")
-    segment_image.load_model("mask_rcnn_model.020-1.088950.h5")
     segment_image.segmentImage(INPUT_IMAGE, output_image_name=OUTPUT_IMAGE, show_bboxes=True)
     print("output received")
     with open(OUTPUT_IMAGE, "rb") as img_file:
