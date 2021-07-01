@@ -8,6 +8,7 @@ from io import BytesIO
 from PIL import Image
 import h5py
 import wget
+import os
 
 wget.download('https://www.dropbox.com/s/ewe7uj2uxwhol4h/mask_rcnn_model.020-1.088950.h5')
 
@@ -16,6 +17,9 @@ OUTPUT_IMAGE = ".output.jpg"
 segment_image = custom_segmentation()
 segment_image.inferConfig(num_classes= 1, class_names= "scratch")
 segment_image.load_model("mask_rcnn_model.020-1.088950.h5")
+
+arr = os.listdir('.')
+print(arr)
 
 #app
 app = Flask(__name__)
