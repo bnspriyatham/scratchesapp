@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 from werkzeug.utils import secure_filename
 from pixellib.instance import custom_segmentation
 import base64
+import cv2
 from io import BytesIO
 from PIL import Image
 
