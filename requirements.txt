@@ -6,3 +6,4 @@ opencv-python
 gunicorn
 skia-python
 opencv-contrib-python-headless
+tensorflow
