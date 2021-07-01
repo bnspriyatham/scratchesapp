@@ -7,8 +7,9 @@ import cv2
 from io import BytesIO
 from PIL import Image
 import h5py
+import wget
 
-!wget https://www.dropbox.com/s/ewe7uj2uxwhol4h/mask_rcnn_model.020-1.088950.h5
+wget.download(https://www.dropbox.com/s/ewe7uj2uxwhol4h/mask_rcnn_model.020-1.088950.h5)
 
 INPUT_IMAGE = ".input.jpg"
 OUTPUT_IMAGE = ".output.jpg"
