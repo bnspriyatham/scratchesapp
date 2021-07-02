@@ -14,11 +14,14 @@ wget.download('https://www.dropbox.com/s/ewe7uj2uxwhol4h/mask_rcnn_model.020-1.0
 
 arr = os.listdir('.')
 print(arr)
+
+weights = h5py.File('mask_rcnn_model.020-1.088950.h5', "r")
+
 INPUT_IMAGE = ".input.jpg"
 OUTPUT_IMAGE = ".output.jpg"
 segment_image = custom_segmentation()
 segment_image.inferConfig(num_classes= 1, class_names= "scratch")
-segment_image.load_model("mask_rcnn_model.020-1.088950.h5")
+segment_image.load_model(weights)
 
 
 #app
