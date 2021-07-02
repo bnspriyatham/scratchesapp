@@ -9,6 +9,7 @@ from PIL import Image
 import h5py
 import wget
 import os
+from flask_ngrok import run_with_ngrok
 
 wget.download('https://www.dropbox.com/s/ewe7uj2uxwhol4h/mask_rcnn_model.020-1.088950.h5')
 
@@ -26,6 +27,7 @@ segment_image.load_model(weights)
 
 #app
 app = Flask(__name__)
+run_with_ngrok(app)
 
 #routes
 @app.route('/',methods = ['POST'])
